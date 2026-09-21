@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -133,7 +134,7 @@ button{
     <p style="font-size:11px;">Marataízes - ES, 29345-000</p>
     
     <div class="botoes-igreja">
-        <a href="https://maps.google.com/?q=R.+da+Casuarina,+656+-+Alto+Lagoa+Funda,+Marataízes+-+ES,+29345-000" target="_blank" class="btn-link btn-maps">
+        <a href="https://maps.google.com/?q=R.+da+Casuarina,+656+-+Alto+Lagoa+Funda,+Marata%C3%ADzes+-+ES,+29345-000" target="_blank" class="btn-link btn-maps">
             <i class="fas fa-location-dot"></i> Ver no Maps
         </a>
         <a href="https://www.instagram.com/shalom_lagoafunda/" target="_blank" class="btn-link btn-insta">
@@ -186,8 +187,8 @@ button{
 <label>Taxa de Inscrição</label>
 <select id="taxa_inscricao">
     <option value="">Selecione uma opção</option>
-    <option value="120">R$ 120,00 - Para quem Vai servir</option>
-    <option value="70">R$ 70,00 - Para quem vai trabalhar</option>
+    <option value="120">R$ 120,00 - Encontrista, primeira vez</option>
+    <option value="70">R$ 70,00 - Para Trabalhadores</option>
 </select>
 
 <button id="btnBaixar">BAIXAR PDF</button>
@@ -204,7 +205,9 @@ function val(id){
 function valTaxa(){
     const select = document.getElementById('taxa_inscricao');
     if(!select.value) return "";
-    return select.value === "120"? "R$ 120,00 - Para quem vai servir" : "R$ 70,00 - Para quem vai trabalhar";
+    return select.value === "120"
+        ? "R$ 120,00 - Encontrista, primeira vez"
+        : "R$ 70,00 - Para Trabalhadores";
 }
 
 function numero(){
@@ -272,7 +275,7 @@ return `
 </div>
 
 <hr style="border:0;border-top:1px dashed #ccc;margin:20px 0 10px 0;">
-<p style="font-size:11px;text-align:center;margin:0;"><b>Taxa Inscrição:</b> R$ 120,00 para quem Vai servir | R$ 70,00 para quem vai trabalhar</p>
+<p style="font-size:11px;text-align:center;margin:0;"><b>Taxa Inscrição:</b> R$ 120,00 - Encontrista, primeira vez | R$ 70,00 - Para Trabalhadores</p>
 <p style="text-align:center;font-size:10px;color:#777;margin-top:5px;">Sistema automático de inscrição</p>
 
 </div>
@@ -317,3 +320,6 @@ document.getElementById('btnBaixar').addEventListener('click', async function(){
 
 </body>
 </html>
+```
+
+
